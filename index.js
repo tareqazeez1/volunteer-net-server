@@ -14,6 +14,11 @@ app.use(cors());
 const port = 5000;
 
 
+app.get('/', (req, res) => {
+  req.send("Heroku working!")
+})
+
+
 
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
