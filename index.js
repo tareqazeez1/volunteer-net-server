@@ -14,9 +14,6 @@ app.use(cors());
 const port = 5000;
 
 
-app.get('/', (req, res) => {
-  req.send("Heroku working!")
-})
 
 
 
@@ -42,6 +39,11 @@ client.connect(err => {
   //     })
 
   // })
+
+  app.get('/', (req, res) => {
+    req.send("Heroku working!")
+  })
+  
 
 
   app.get('/infos',(req,res)=>{
